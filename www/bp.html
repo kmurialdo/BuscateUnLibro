@@ -1,0 +1,82 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="bp">
+    <!--Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left subtitle"><a class="back margin-left" href="#">Volver</a></div>
+            <div class="right">
+                <a href="#" data-popup=".popup-info" class="button popup-open link navbar-tooltip">
+                    <i class="icon f7-icons if-not-md">info_circle_fill</i>
+                    <i class="icon material-icons if-md">info_outline</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Toolbar -->
+    <div class="buscar toolbar toolbar-bottom">
+        <div class="toolbar-inner padding-half">
+            <!--Toolbar links-->
+            <button id="btnbuscar" class="margin-bottom button button-fill">Buscar</button>
+        </div>
+    </div>
+    <div class="page-content fondopaginas display-flex flex-direction-column text-align-center">
+        <div class="block no-margin-vertical">
+            <!--CONTENIDO DE PÁGINAS-->
+            <div>
+                <h3>Estas preguntas nos ayudarán a ayudarte</h3>
+            </div>
+            <h4>¿Cómo te sentís hoy?</h4>
+            <div>
+                <div class="block justify-content-space-between display-flex flex-direction-row">
+                    <img class="imgcaras" src="img/cara1.png" id="cara1">
+                    <img class="imgcaras" src="img/cara2.png" id="cara2">
+                    <img class="imgcaras" src="img/cara3.png" id="cara3">
+                    <img class="imgcaras" src="img/cara4.png" id="cara4">
+                </div>
+            </div>
+            <div>
+                <h4>Si hoy te invitasen a una fiesta, ¿irías?</h4>
+                <div class="margin-vertical display-flex flex-direction-row">
+                    <button id="e" class="preg1 button margin-half button-outline">Sí</button>
+                    <button id="i" class="preg1 button margin-half button-outline">No</button>
+                </div>
+            </div>
+            <div>
+                <h4>¿Podrías definir la forma de ser de una persona con solo verla?</h4>
+                <div class="margin-vertical display-flex flex-direction-row">
+                    <button id="n" class="preg2 button margin-half button-outline">Sí</button>
+                    <button id="s" class="preg2 button margin-half button-outline">No</button>
+                </div>
+            </div>
+            <div>
+                <h4>Llegó el momento de las vacaciones... ¿Te tomás el tiempo para planear el lugar exacto y cada movimiento dónde vas a ir o te sentís más cómod@ en la improvisación </h4>
+                <div class="margin-vertical display-flex flex-direction-row">
+                    <button id="t" class="preg3 button margin-half button-outline">Planeo</button>
+                    <button id="f" class="preg3 button margin-half button-outline">Improviso</button>
+                </div>
+            </div>
+            <div>
+                <h4>Al lidiar con el mundo exterior, ¿preferís las cosas estructuradas y bajo control o estás abiert@ a nueva información y opiniones?</h4>
+                <div class="margin-vertical display-flex flex-direction-row">
+                    <button id="j" class="preg4 button margin-half button-outline">El control</button>
+                    <button id="p" class="preg4 button margin-half button-outline">Lo nuevo</button>
+                </div>
+            </div>
+            <!--<button class="col button button-fill">Anterior</button>
+                        <button id="bp1sig" class="col-33 button button-fill">Siguiente</button>-->
+        </div>
+        <!--POPUP-->
+        <div class="block popup popup-info">
+            <div class="block text-align-center">
+                <div class="display-flex flex-direction-row justify-content-space-between">
+                    <h3 id="poptitulo">¿Por qué estás preguntas?</h3>
+                    <a class="link popup-close" href="#">Volver</a>
+                </div>
+                <p>Tomando como premisa esta versión reducida del “Indicador de tipo Myers-Briggs” o “MBTI” (por sus siglas en inglés) podremos tener una idea de cómo procesás la información e interactuas con las personas que te rodean. De ese modo buscamos y seleccionamos los libros ideales para vos</p>
+                <img id="imgpopinfo" src="img/infopop.png">
+            </div>
+        </div>
+        <!--FIN DEL POPUP-->
+    </div>
+</div>

@@ -1,0 +1,134 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="sumalibros">
+    <!--Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <!--<div class="left"><a class="link popover-open" href="#" data-popover=".popover-about">About</a></div>-->
+            <div class="title">Agregar Libros</div>
+            <div class="right subtitle"><a class="back margin-right" href="#">Volver</a></div>
+        </div>
+    </div>
+    <!--Toolbar 
+                <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner">
+                oolbar links
+                <a href="#" id="pgbiblio" class="link">Mi Biblioteca</a>
+                <a href="#" id="pghome" class="link">HOME</a>
+                <a href="#" id="pgtendencias" class="link">Tendencias</a>
+                </div>
+            </div>-->
+    <div class="page-content text-align-center">
+        <div class="block">
+            <!--CONTENIDO DE PÁGINAS-->
+            <div class="list no-hairlines-md">
+                <ul>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Código</div>
+                            <div class="item-input-wrap">
+                                <input id="nuevocodigo" type="number" placeholder="" />
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Título</div>
+                            <div class="item-input-wrap">
+                                <input id="nuevotitulo" type="text" placeholder="" />
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Autor</div>
+                            <div class="item-input-wrap">
+                                <input id="nuevoautor" type="text" placeholder="" />
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Año</div>
+                            <div class="item-input-wrap">
+                                <input id="nuevoanio" type="number" placeholder="" />
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Género</div>
+                            <div class="item-input-wrap input-dropdown-wrap">
+                                <select id="nuevogenero" placeholder="Please choose...">
+                                    <option value="romantico">Romántico</option>
+                                    <option value="realista">Realista</option>
+                                    <option value="realismomagico">Realismo Mágico</option>
+                                    <option value="terror">Terror</option>
+                                    <option value="ensayo">Ensayo</option>
+                                    <option value="suspenso">Suspenso</option>
+                                    <option value="aventura">Aventura</option>
+                                    <option value="filosofia">Filosofía</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Cantidad de Páginas</div>
+                            <div class="item-input-wrap">
+                                <input id="nuevopaginas" type="number" placeholder="" />
+                                <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label>Precio en $</label>
+                        <div class="col row">
+                            <div class="col-33 item-content">
+                                <div class="item-media"><img class="imgicon" src="img/iconebook.png"></div>
+                                <input id="pebook" type="number" placeholder="ebook">
+                            </div>
+                            <div class="col-33 item-content">
+                                <div class="item-media"><img class="imgicon" src="img/iconaudio.png"></div>
+                                <input id="paudio" type="number" placeholder="Audio">
+                            </div>
+                            <div class="col-33 item-content">
+                                <div class="item-media"><img class="imgicon" src="img/iconlibro.png"></div>
+                                <input id="ppapel" type="number" placeholder="Papel">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Sinopsis</div>
+                            <div class="item-input-wrap">
+                                <textarea id="nuevasinopsis" placeholder="Sinopsis"></textarea>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col">
+                                <button class="col button button-outline button-round button-raised" id="btnGaleria">GALERIA</button>
+                            </div>
+                            <div class="col">
+                                <button class="col button button-outline button-round button-raised" id="btnCamara">CAMARA</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <img src="img/admin.png" id="foto" width="30%">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--<button id="tapa" class="col button button-fill">Prueba</button>-->
+            <button id="agregar" class="col button button-fill">Agregar</button>
+        </div>
+    </div>
+</div>

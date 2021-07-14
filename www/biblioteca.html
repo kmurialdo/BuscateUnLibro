@@ -1,0 +1,76 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="biblioteca">
+    <!--Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left subtitle"><a class="back margin-left" href="#">Volver</a></div>
+            <div class="right subtitle"><a class="link margin-right" id="bibchango" href="#"><i class="f7-icons">cart<span class="badchango badge color-orange"></span></i></a></div>
+        </div>
+    </div>
+    <!--Toolbar -->
+    <div class="toolbar toolbar-bottom">
+        <div class="toolbar-inner">
+            <!--Toolbar links-->
+            <a href="#" id="bibpgbiblio" class="link activo toltext">Mi Biblioteca</a>
+            <a href="#" id="bibpghome" class="link  toltext">HOME</a>
+            <a href="#" id="bibpgtendencias" class="link  toltext">Tendencias</a>
+        </div>
+    </div>
+    <div class="page-content fondopaginas text-align-center">
+        <div id="biblioconlibros" class="block">
+            <!--CONTENIDO DE PÁGINAS-->
+            <div id="bibliovacia" class="oculto">
+                <img id="imgbibliovacia" src="img/biblioteca.png">
+                <h3>La biblioteca está vacía</h3>
+            </div>
+            <!--SHEET MODAL DE COMPRA-->
+            <div class="sheet-modal my-sheetbib">
+                <div class="toolbar">
+                    <div class="padding-left toolbar-inner">
+                        <div class="left">
+                            <h4>Elegí el formato que desees</h4>
+                        </div>
+                        <div class="right"><a class="link sheet-close" href="#">Volver</a></div>
+                    </div>
+                </div>
+                <div class="sheet-modal-inner">
+                    <div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <div id="pgbe" class="acomprar item-content sheet-close popup-close">
+                                        <div class="item-media"><img class="imgicon" src="img/iconebook.png"></div>
+                                        <div id="ebook" class="item-inner compro">
+                                            <div class="item-title">E-book</div>
+                                            <div id="precioebookbib" class="item-after">$ </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="pgba" class="acomprar item-content sheet-close popup-close">
+                                        <div class="item-media"><img class="imgicon" src="img/iconaudio.png"></div>
+                                        <div id="audio" class="item-inner compro">
+                                            <div class="item-title">Audiolibro</div>
+                                            <div id="precioaudiobib" class="item-after">$ </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="pgbp" class="acomprar item-content sheet-close popup-close">
+                                        <div class="item-media"><img class="imgicon" src="img/iconlibro.png"></div>
+                                        <div id="papel" class="item-inner compro">
+                                            <div class="item-title">Libro Impreso</div>
+                                            <div id="preciopapelbib" class="item-after">$ </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FIN DEL SHEET MODAL COMPRA-->
+        </div>
+    </div>
+</div>

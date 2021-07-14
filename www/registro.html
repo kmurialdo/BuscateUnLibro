@@ -1,0 +1,104 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="registro">
+       
+            <!--Top Navbar -->
+            <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner">
+                    <!--<div class="left"><a class="link popover-open" href="#" data-popover=".popover-about">About</a></div>-->
+                    <div class="title">Registrarse</div>
+                    <div class="right subtitle"><a class="margin-right back" href="#">Volver</a></div>
+                </div>
+            </div>
+    
+             <!--Toolbar 
+            <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner">
+                Toolbar links
+                <a href="#" id="pgbiblio" class="link">Mi Biblioteca</a>
+                <a href="#" id="pghome" class="link">HOME</a>
+                <a href="#" id="pgtendencias" class="link"><i class="icon sort_up"></i>Tendencias</a>
+                </div>
+            </div>-->
+        
+    <div class="page-content text-align-center">
+        <div class="block">
+        <!--CONTENIDO DE PÁGINAS-->
+        <h2>Bienvenid@</h2>
+        <h4>Recordá que podés registrarte como "escritor/a" para cargar tus manuscritos y disfrutar también de los servicios editoriales de la App.</h4><br>
+                
+                    <div class="list inset">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input id="nombrereg" type="text" placeholder="Nombre" required/>
+                                    <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input id="aperereg" type="text" placeholder="Apellido" required/>
+                                    <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input id="fdnreg" type="date" value="2000-01-01" placeholder="Fecha de Nacimiento" required />
+                                    
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <select id="userreg" placeholder="Te registrás cómo..." required>
+                                            <option value="lector" selected="true" >Lector/a</option>
+                                            <option value="escritor">Escritor/a</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="item-link smart-select smart-select-init">
+                                    <select id="provreg" name="provincia" required>
+                                        <option value="" selected="true" disabled>Seleccioná tu provincia</option>
+                                    </select>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Provincia</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input id="emailreg" type="email" placeholder="e-mail" required/>
+                                    <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input id="clavereg" type="password" placeholder="Contraseña" required />
+                                    <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                    <button id="registrar" class="button button-large">Registrarse</button>
+                    </div>
+                 
+            </div>
+        </div>
+    </div>
+</div>

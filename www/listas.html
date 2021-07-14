@@ -1,0 +1,93 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="listas">
+    <!--Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left subtitle"><a class="back margin-left" href="#">Volver</a></div>
+            <div class="right subtitle"><a class="link margin-right" id="listchango" href="#"><i class="f7-icons">cart<span class="badchango badge color-orange"></span></i></a></div>
+        </div>
+    </div>
+    <!--Toolbar -->
+    <div class="toolbar toolbar-bottom">
+        <div class="toolbar-inner">
+            <!--Toolbar links-->
+            <a href="#" id="lispgbiblio" class="link">Mi Biblioteca</a>
+            <a href="#" id="lispghome" class="link">HOME</a>
+            <a href="#" id="lispgtendencias" class="link">Tendencias</a>
+        </div>
+    </div>
+    <div class="page-content fondopaginas text-align-center">
+        <div id="listasaver" class="block">
+            <!--CONTENIDO DE PÁGINAS-->
+            <h1 id="lomasleidoen"></h1>
+            <div id="l1">
+                <span class="badlistas badge color-orange">1</span><img id="imgl1" data-src="" class="lazy" style="width: 50%;height: 45vh;">
+                <h3 id="h3l1"></h3>
+            </div>
+            <div id="l2">
+                <span class="badlistas badge color-orange">2</span><img id="imgl2" data-src="" class="lazy" style="width: 50%;height: 45vh;">
+                <h3 id="h3l2"></h3>
+            </div>
+            <div id="l3">
+                <span class="badlistas badge color-orange">3</span><img id="imgl3" data-src="" class="lazy" style="width: 50%;height: 45vh;">
+                <h3 id="h3l3"></h3>
+            </div>
+            <div id="l4">
+                <span class="badlistas badge color-orange">4</span><img id="imgl4" data-src="" class="lazy" style="width: 50%;height: 45vh;">
+                <h3 id="h3l4"></h3>
+            </div>
+            <div id="l5">
+                <span class="badlistas badge color-orange">5</span><img id="imgl5" data-src="" class="lazy" style="width: 50%;height: 45vh;">
+                <h3 id="h3l5"></h3>
+            </div>
+        </div>
+        <!--SHEET MODAL DE COMPRA-->
+        <div class="sheet-modal my-sheetList">
+            <div class="toolbar">
+                <div class="padding-left toolbar-inner">
+                    <div class="left">
+                        <h4>Elegí el formato que desees</h4>
+                    </div>
+                    <div class="right"><a class="link sheet-close" href="#">Volver</a></div>
+                </div>
+            </div>
+            <div class="sheet-modal-inner">
+                <div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <div id="pgListe" class="acomprar item-content sheet-close popup-close">
+                                    <div class="item-media"><img class="imgicon" src="img/iconebook.png"></div>
+                                    <div id="ebook" class="item-inner compro">
+                                        <div class="item-title">E-book</div>
+                                        <div id="precioebookList" class="item-after">$ </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="pgLista" class="acomprar item-content sheet-close popup-close">
+                                    <div class="item-media"><img class="imgicon" src="img/iconaudio.png"></div>
+                                    <div id="audio" class="item-inner compro">
+                                        <div class="item-title">Audiolibro</div>
+                                        <div id="precioaudioList" class="item-after">$ </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="pgListp" class="acomprar item-content sheet-close popup-close">
+                                    <div class="item-media"><img class="imgicon" src="img/iconlibro.png"></div>
+                                    <div id="papel" class="item-inner compro">
+                                        <div class="item-title">Libro Impreso</div>
+                                        <div id="preciopapelList" class="item-after">$ </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIN DEL SHEET MODAL COMPRA-->
+    </div>
+</div>

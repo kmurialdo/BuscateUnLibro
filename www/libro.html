@@ -1,0 +1,93 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="libro">
+    Top Navbar
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left subtitle"><a class="back margin-left" href="#">Volver</a></div>
+            <div class="right subtitle"><a class="link margin-right" id="libchango" href="#"><i class="f7-icons">cart<span class="badchango badge color-orange"></span></i></a></div>
+        </div>
+    </div>
+    <!--Toolbar -->
+    <div class="toolbar toolbar-bottom">
+        <div class="toolbar-inner">
+            <!--Toolbar links-->
+            <a href="#" id="pgbiblio" class="link toltext">Mi Biblioteca</a>
+            <a href="#" id="pghome" class="link toltext">HOME</a>
+            <a href="#" id="pgtendencias" class="link toltext"><i class="icon sort_up"></i>Tendencias</a>
+        </div>
+    </div>
+    <div class="page-content fondopaginas text-align-center padding-half ">
+        <div class="block">
+            <!--CONTENIDO DE PÁGINAS-->
+            <div class="block align-items-center padding-bottom">
+                <h2>¡Eureka!</h2>
+                <img id="imgtapa" src="">
+                <h3 id="titulo"></h3>
+                <h4><a class="button popup-open bottom3vh" id="sinopsis" href="#" data-popup=".popup-about">Sinopsis</a></h4>
+                <button id="agregarabiblio" class="button bottom3vh margin-half button-fill color-blue">Agregar a Mi Biblioteca</button>
+                <button class="comprar bottom3vh button margin-half button-fill color-orange sheet-open" data-sheet=".my-sheet">Comprar</button>
+            </div>
+        </div>
+    </div>
+    <!--POPUP-->
+    <div class="display-flex flex-direction-column popup popup-about">
+        <div>
+            <div class="block display-flex flex-direction-row justify-content-space-between">
+                <h3 id="poptitulo"></h3>
+                <a class="link popup-close" href="#">Volver</a>
+            </div>
+        </div>
+        <p class="block margin-half popsinopsis"></p>
+        <h5 class="right margin-half" id="popanio"></h5>
+        <button class="comprar2 button button-fill color-orange sheet-open" data-sheet=".my-sheet">Comprar</button>
+    </div>
+    <!--FIN DEL POPUP-->
+    <!--SHEET MODAL DE COMPRA-->
+    <div class="sheet-modal my-sheet">
+        <div class="toolbar">
+            <div class="padding-left toolbar-inner">
+                <div class="left">
+                    <h4>Elegí el formato que desees</h4>
+                </div>
+                <div class="right"><a class="link sheet-close" href="#">Volver</a></div>
+            </div>
+        </div>
+        <div class="sheet-modal-inner">
+            <div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <div id="pgle" class="acomprar item-content sheet-close popup-close">
+                                <div class="item-media"><img class="imgicon" src="img/iconebook.png"></div>
+                                <div id="ebook" class="item-inner compro">
+                                    <div class="item-title">E-book</div>
+                                    <div id="precioebook" class="item-after">$ </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="pgla" class="acomprar item-content sheet-close popup-close">
+                                <div class="item-media"><img class="imgicon" src="img/iconaudio.png"></div>
+                                <div id="audio" class="item-inner compro">
+                                    <div class="item-title">Audiolibro</div>
+                                    <div id="precioaudio" class="item-after">$ </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="pglp" class="acomprar item-content sheet-close popup-close">
+                                <div class="item-media"><img class="imgicon" src="img/iconlibro.png"></div>
+                                <div id="papel" class="item-inner compro">
+                                    <div class="item-title">Libro Impreso</div>
+                                    <div id="preciopapel" class="item-after">$ </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FIN DEL SHEET MODAL COMPRA-->
+</div>

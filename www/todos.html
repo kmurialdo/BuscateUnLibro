@@ -1,0 +1,88 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="todos">
+    <!--Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left subtitle"><a class="back margin-left" href="#">Volver</a></div>
+            <div class="right subtitle"><a class="link margin-right" id="todchango" href="#"><i class="f7-icons">cart<span class="badchango badge color-orange"></span></i></a></div>
+            <div class="subnavbar">
+                <form class="searchbar">
+                    <div class="searchbar-inner">
+                        <div class="searchbar-input-wrap">
+                            <input type="search" placeholder="BuscateUnLibro" />
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                        </div>
+                        <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Toolbar -->
+    <div class="toolbar toolbar-bottom">
+        <div class="toolbar-inner">
+            <!--Toolbar links-->
+            <a href="#" id="pgbiblio" class="link">Mi Biblioteca</a>
+            <a href="#" id="pghome" class="link">HOME</a>
+            <a href="#" id="pgtendencias" class="link">Tendencias</a>
+        </div>
+    </div>
+    <div class="page-content fondopaginas text-align-center">
+        <div>
+            <!--CONTENIDO DE PÁGINAS-->
+            <div class="list searchbar-found">
+                <ul id="abuscarlo">
+                </ul>
+            </div>
+            <!--SHEET MODAL DE COMPRA-->
+            <div class="sheet-modal my-sheetTod">
+                <div class="toolbar">
+                    <div class="padding-left toolbar-inner">
+                        <div class="left">
+                            <h4>Elegí el formato que desees</h4>
+                        </div>
+                        <div class="right"><a class="link sheet-close" href="#">Volver</a></div>
+                    </div>
+                </div>
+                <div class="sheet-modal-inner">
+                    <div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <div id="pgTode" class="acomprar item-content sheet-close popup-close">
+                                        <div class="item-media"><img class="imgicon" src="img/iconebook.png"></div>
+                                        <div id="ebook" class="item-inner compro">
+                                            <div class="item-title">E-book</div>
+                                            <div id="precioebookTod" class="item-after">$ </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="pgToda" class="acomprar item-content sheet-close popup-close">
+                                        <div class="item-media"><img class="imgicon" src="img/iconaudio.png"></div>
+                                        <div id="audio" class="item-inner compro">
+                                            <div class="item-title">Audiolibro</div>
+                                            <div id="precioaudioTod" class="item-after">$ </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="pgTodp" class="acomprar item-content sheet-close popup-close">
+                                        <div class="item-media"><img class="imgicon" src="img/iconlibro.png"></div>
+                                        <div id="papel" class="item-inner compro">
+                                            <div class="item-title">Libro Impreso</div>
+                                            <div id="preciopapelTod" class="item-after">$ </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FIN DEL SHEET MODAL COMPRA-->
+        </div>
+    </div>
+</div>

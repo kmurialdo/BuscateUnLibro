@@ -1,0 +1,158 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page" data-name="generarlistas">
+    <!--Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <!--<div class="left"><a class="link popover-open" href="#" data-popover=".popover-about">About</a></div>-->
+            <div class="title">Tendencias</div>
+            <div class="right subtitle"><a class="back margin-right" href="#">Volver</a></div>
+        </div>
+    </div>
+    <!--Toolbar 
+                <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner">
+                oolbar links
+                <a href="#" id="pgbiblio" class="link">Mi Biblioteca</a>
+                <a href="#" id="pghome" class="link">HOME</a>
+                <a href="#" id="pgtendencias" class="link">Tendencias</a>
+                </div>
+            </div>-->
+    <div class="page-content text-align-center">
+        <div class="block display-flex flex-direction-column justify-content-space-around">
+            <!--CONTENIDO DE PÁGINAS-->
+            <h2>Lo más leído...</h2>
+            <p class="no-margin">Ingresá el código del libro en cada puesto para actualizar la lista</p>
+            <div class="list inline-labels no-hairlines-md">
+                <ul>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <label class="margin-right">En...</label>
+                            <div class="item-input-wrap input-dropdown-wrap">
+                                <select id="nombrelista" placeholder="Please choose...">
+                                    <option value="" selected="true" disabled>Seleccionar Lista</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <label class="margin-right">1°</label>
+                            <div class="item-input-wrap input-dropdown-wrap">
+                                <select id="puesto1" class="puestos" placeholder="Please choose...">
+                                    <option value="" selected="true" disabled>Seleccionar Libro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <label class="margin-right">2°</label>
+                            <div class="item-input-wrap input-dropdown-wrap">
+                                <select id="puesto2" class="puestos" placeholder="Please choose...">
+                                    <option value="" selected="true" disabled>Seleccionar Libro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <label class="margin-right">3°</label>
+                            <div class="item-input-wrap input-dropdown-wrap">
+                                <select id="puesto3" class="puestos" placeholder="Please choose...">
+                                    <option value="" selected="true" disabled>Seleccionar Libro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            <label class="margin-right">4°</label>
+                            <div class="item-input-wrap input-dropdown-wrap">
+                                <select id="puesto4" class="puestos" placeholder="Please choose...">
+                                    <option value="" selected="true" disabled>Seleccionar Libro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <label class="margin-right">5°</label>
+                        <div class="item-input-wrap input-dropdown-wrap">
+                            <select id="puesto5" class="puestos" placeholder="Please choose...">
+                                <option value="" selected="true" disabled>Seleccionar Libro</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="display-flex justify-content-row">
+            <button id="actualizarlista" class="col button margin-half button-fill">Actualizar</button>
+            <button id="crearlista" class="col button margin-half button-fill sheet-open" data-sheet=".my-sheet">Crear</button>
+            <button id="borrarlista" class="col button margin-half button-fill color-red sheet-open" data-sheet=".my-sheet2">Borrar</button>
+        </div>
+        <!--SHEET MODAL DE CREAR-->
+        <div class="sheet-modal my-sheet">
+            <div class="toolbar">
+                <div class="padding-left toolbar-inner">
+                    <div class="left">
+                        <h4>Lo más leído en...</h4>
+                    </div>
+                    <div class="right"><a class="link sheet-close" href="#">Volver</a></div>
+                </div>
+            </div>
+            <div class="block sheet-modal-inner">
+                <div>
+                    <div class="list no-hairlines-md">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-media">
+                                    <i class="f7-icons">arrow_up_right_diamond</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <input type="text" id="nuevalista" placeholder="Crear" />
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="col button margin-half button-fill sheet-close" id="agregarlista">Agregar</button>
+            </div>
+            <!--FIN DEL SHEET MODAL CREAR-->
+            <!--SHEET MODAL DE BORRAR-->
+            <div class="sheet-modal my-sheet2">
+                <div class="toolbar">
+                    <div class="block toolbar-inner">
+                        <div class="left">
+                            <h4>Borrar Lista</h4>
+                        </div>
+                        <div class="right"><a class="link sheet-close" href="#">Volver</a></div>
+                    </div>
+                </div>
+                <div class="padding-half sheet-modal-inner">
+                    <div class="list inline-labels no-hairlines-md">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-media">
+                                    <i class="f7-icons">bin_xmark_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-input-wrap input-dropdown-wrap">
+                                        <select id="listaAborrar" placeholder="Please choose...">
+                                            <option value="" selected="true" disabled>Lista a Borrar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="col button margin-half button-fill sheet-close" id="borrarlistasheet">Borrar</button>
+                </div>
+                <!--FIN DEL SHEET MODAL BORRAR-->
+            </div>
+        </div>
+    </div>
+</div>

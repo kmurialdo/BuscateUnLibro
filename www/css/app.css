@@ -1,0 +1,220 @@
+/* Your app custom styles here */
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+       url('../fonts/poppins-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v13-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+/* poppins-italic - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/poppins-v13-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Italic'), local('Poppins-Italic'),
+       url('../fonts/poppins-v13-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v13-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v13-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v13-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v13-latin-italic.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/poppins-v13-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+       url('../fonts/poppins-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v13-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v13-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+/* poppins-700italic - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/poppins-v13-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Bold Italic'), local('Poppins-BoldItalic'),
+       url('../fonts/poppins-v13-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v13-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v13-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v13-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v13-latin-700italic.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+/* poppins-900 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/poppins-v13-latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Black'), local('Poppins-Black'),
+       url('../fonts/poppins-v13-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v13-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v13-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v13-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v13-latin-900.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+/* poppins-900italic - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/poppins-v13-latin-900italic.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Black Italic'), local('Poppins-BlackItalic'),
+       url('../fonts/poppins-v13-latin-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v13-latin-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v13-latin-900italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v13-latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v13-latin-900italic.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+
+
+* {
+	font-family: 'Poppins', Arial, sans-serif;
+}
+
+/*---------------------------------------------------
+IMAGENES
+---------------------------------------------------*/
+#imgindex{
+  width: 50vw;
+}
+#imgtendencias{
+  width: 100vw;
+  height: 100vh;
+}
+#buspersonal {
+  width: 80vw;
+  height: 45vh;
+  position: initial;
+  }
+#imgbibliovacia{
+  width: 85vw;
+}
+.imgcaras {
+  width: 15vw;
+  
+}
+.imgresp {
+  width: 20;
+}
+
+#imgtapa {
+  width: 50vw;
+}
+.imgicon {
+  width: 5vw;
+}
+.fondoadmin {
+  background-image: url("../img/admin.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#imgpopinfo {
+  width: 50vw;
+}
+#imgcompravacia {
+  width: 40vw;
+}
+/*------------------------------------------------------------
+ESTILO
+--------------------------------------------------------------*/
+.buscar {
+  height: 10vh;
+}
+#btnbuscar {
+  height: 7vh;
+}
+.visible {
+  display: block;
+  visibility: visible;
+}
+.oculto {
+  display: none;
+  visibility: hidden;
+}
+
+.letra {
+  font-size: 3vh;
+}
+  .demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .demo-card-header-pic .card-content-padding .date {
+    color: #8e8e93;
+  }
+  .popsinopsis{
+    font-size: smaller;    
+  }
+  .comprar2 {
+    bottom: 10%;
+    position: absolute;
+  }
+  .ulindex{
+    background-color: ivory;
+    opacity: 0.85;
+  }
+  .cardtend {
+    background-image: url("../img/fondocard.png");
+    background-size: 100% 100%
+  }
+ .fondoapp {
+    background-image: url("../img/frameindex.jpg");
+    background-size: 100% 100%;
+  }
+.fondopaginas {
+    background-image: url("../img/frame3.jpg");
+    background-size: 100% 100%;
+}
+.fondofinal{
+    background-image: url("../img/final.jpg");
+    background-size: 100% 100%;
+}
+.cruzimg {
+    position: absolute;
+    top: 3vh;
+}
+.badlistas{
+  position: absolute;
+}
+#productosacomprar{
+  bottom: 10vh;
+}
+#recupero {
+    font-weight: 700;
+    margin-left: 61vw;
+}
+#finalverhistorial{
+  background-color: #278da8;
+}
+#compravacia {
+  margin-top: 15vh;
+}
+.bottom15vh{
+  margin-bottom: 15vh;
+}
+.activo {
+    font-weight: 800;
+}
+.btnactivo {
+    font-weight: 700;
+}
+.bottom3vh {
+  bottom: 3vh;
+}
