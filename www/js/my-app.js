@@ -67,7 +67,7 @@
   var precioA = "";
   var precioP = "";
   var tapa = "";
-  var tapanueva="";
+  var tapanueva = "";
   var tit = "";
   var aut = "";
   var l1 = "";
@@ -78,7 +78,7 @@
   var listaAver = "";
   var ind = 0;
   var productoscomprados = [];
-  
+
 
   // Handle Cordova Device Ready Event
   $$(document).on('deviceready', function() {
@@ -240,7 +240,7 @@
               querySnapshot.forEach(function(doc) {
                   console.log("entre al DOC ")
                   $$("#bibliovacia").removeClass("visible").addClass("oculto");
-                  console.log("IDGUARDADO = "+doc.id);
+                  console.log("IDGUARDADO = " + doc.id);
                   libroenbiblio = doc.data().codigodelibro;
                   //fechadeguardado = doc.data().fecha;
                   //console.log(fechadeguardado);
@@ -319,60 +319,60 @@
   })
   $$(document).on('page:init', '.page[data-name="miscompras"]', function(e) {
 
-  comprasdeUsuario=comprasRef.where("usuario","==",emailactual);
-  comprasdeUsuario.get()
-  .then(function(querySnapshot){
-    querySnapshot.forEach(function(doc){
-      //console.log("entré al DOC de MIS COMPRAS - ARRAY = "+JSON.stringify(doc.data()));
-      $$("#historialdecompras").append(`
+      comprasdeUsuario = comprasRef.where("usuario", "==", emailactual);
+      comprasdeUsuario.get()
+          .then(function(querySnapshot) {
+              querySnapshot.forEach(function(doc) {
+                  //console.log("entré al DOC de MIS COMPRAS - ARRAY = "+JSON.stringify(doc.data()));
+                  $$("#historialdecompras").append(`
                                       <div class="card card-outline">
-                                          <div class="card-header title">Compra realizada el `+doc.data().fecha+`</div>
+                                          <div class="card-header title">Compra realizada el ` + doc.data().fecha + `</div>
                                           <div class="card-content card-content-padding">
                                             <div class="list media-list">
-                                              <ul id="`+doc.id+`">
+                                              <ul id="` + doc.id + `">
                                               </ul>
                                             </div>
                                           </div>
                                       </div>
                                       `);
-      //libros=JSON.parse(doc.data().libros);
-      //console.log(libros);
-      for (i=0; i<doc.data().libros.length; i++){
-        console.log(doc.data().libros[i]);
-        switch (doc.data().libros[i].formato) {
-          case "e-book":
-              foto="img/iconebook.png";
-              break
-          case "Audiolibro":
-              foto="img/iconaudio.png";
-              break
-          case "Libro impreso":
-              foto="img/iconlibro.png";
-              break
-              default:
-        }
+                  //libros=JSON.parse(doc.data().libros);
+                  //console.log(libros);
+                  for (i = 0; i < doc.data().libros.length; i++) {
+                      console.log(doc.data().libros[i]);
+                      switch (doc.data().libros[i].formato) {
+                          case "e-book":
+                              foto = "img/iconebook.png";
+                              break
+                          case "Audiolibro":
+                              foto = "img/iconaudio.png";
+                              break
+                          case "Libro impreso":
+                              foto = "img/iconlibro.png";
+                              break
+                          default:
+                      }
 
-      $$("#"+doc.id+"").append(`
+                      $$("#" + doc.id + "").append(`
                             <li>                                        
                               <div class="item-content">
-                                <div class="item-media"><img src="`+foto+`" width="44" /></div>
+                                <div class="item-media"><img src="` + foto + `" width="44" /></div>
                                     <div class="item-inner">
                                         <div class="item-title-row">
-                                        <div class="item-title">`+doc.data().libros[i].titulo+`</div>
+                                        <div class="item-title">` + doc.data().libros[i].titulo + `</div>
                                         </div>
-                                        <div class="text-align-left item-subtitle">`+doc.data().libros[i].autor+`</div>
+                                        <div class="text-align-left item-subtitle">` + doc.data().libros[i].autor + `</div>
                                     </div>
                               </div>
                             </li>`);
-      }
-      
-    })
-  }).catch(function(e){
-    console.log("ERROR = "+e);
-  });     
-    $$("#pgbiblio").on('click', fnAbiblio);
-    $$("#pgtendencias").on('click', fnAtendencias);
-    $$("#pghome").on('click', fnAhome);
+                  }
+
+              })
+          }).catch(function(e) {
+              console.log("ERROR = " + e);
+          });
+      $$("#pgbiblio").on('click', fnAbiblio);
+      $$("#pgtendencias").on('click', fnAtendencias);
+      $$("#pghome").on('click', fnAhome);
   })
 
   $$(document).on('page:init', '.page[data-name="tendencias"]', function(e) {
@@ -460,13 +460,13 @@
       $$("#lispghome").on('click', fnAhome);
       $$("#lispgtendencias").on('click', fnAtendencias);
       $$(".acomprar").on('click', function() { fnComprar(this.id) });
-      $$("#l1").on('click',function() { fnverellibro3(this.id) } );
-      $$("#l2").on('click',function() { fnverellibro3(this.id) } );
-      $$("#l3").on('click',function() { fnverellibro3(this.id) } );
-      $$("#l4").on('click',function() { fnverellibro3(this.id) } );
-      $$("#l5").on('click',function() { fnverellibro3(this.id) } );
-    })
-$$(document).on('page:init', '.page[data-name="final"]', function(e) {
+      $$("#l1").on('click', function() { fnverellibro3(this.id) });
+      $$("#l2").on('click', function() { fnverellibro3(this.id) });
+      $$("#l3").on('click', function() { fnverellibro3(this.id) });
+      $$("#l4").on('click', function() { fnverellibro3(this.id) });
+      $$("#l5").on('click', function() { fnverellibro3(this.id) });
+  })
+  $$(document).on('page:init', '.page[data-name="final"]', function(e) {
       $$("#volverainiciar").on('click', fnAhome);
       $$("#finalverhistorial").on('click', fnHistorialdeCompras);
   })
@@ -654,11 +654,16 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
                   };
 
                   userRef.doc(email).set(datanuevo);
-                  app.dialog.alert('Registro Exitoso! Gracias. Es momento de disfrutar de la lectura', 'BuscateUnLibro', function() {
+                  firebase.auth().currentUser.sendEmailVerification()
+                      .then(() => {
+                          app.dialog.alert('Registro Exitoso! Te hemos enviado un correo para verificar tu cuenta.', 'BuscateUnLibro', function() {
+                              mainView.router.navigate('/index/');
+                          });
+                      })
 
-                      mainView.router.navigate('/index/');
 
-                  });
+
+
 
               })
               .catch(function(error) {
@@ -1097,7 +1102,7 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
       bibliotecasRef.doc(a).get()
           .then(function(doc) {
               if (doc.exists) {
-                console.log("eeuu ="+doc.data().codigodelibro);
+                  console.log("eeuu =" + doc.data().codigodelibro);
                   librosRef.doc(doc.data().codigodelibro).get()
                       .then(function(doc2) {
                           if (doc2.exists) {
@@ -1246,24 +1251,25 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
 
 
   }
-    function fnverellibro3(c) {
+
+  function fnverellibro3(c) {
       switch (c) {
-        case "l1":
-            var lt=l1;
-            break
-        case "l2":
-            var lt=l2;
-            break
-        case "l3":
-            var lt=l3;
-            break
-        case "l4":
-            var lt=l4;
-            break
-        case "l5":
-            var lt=l5;
-            break
-            default:
+          case "l1":
+              var lt = l1;
+              break
+          case "l2":
+              var lt = l2;
+              break
+          case "l3":
+              var lt = l3;
+              break
+          case "l4":
+              var lt = l4;
+              break
+          case "l5":
+              var lt = l5;
+              break
+          default:
       }
       console.log("Libro a ver = " + lt);
 
@@ -1320,7 +1326,7 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
                   console.log("Ver Mas no existe Libro");
               }
           });
-}
+  }
   /*---------------------------------
   FUNCIONES COMPRAR
   ----------------------------------*/
@@ -1414,8 +1420,8 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
           prod = {
               "codigo": libroacomprar.cod,
               "formato": libroacomprar.formato,
-              "titulo":libroacomprar.titulo,
-              "autor":libroacomprar.autor,
+              "titulo": libroacomprar.titulo,
+              "autor": libroacomprar.autor,
           };
           //console.log(prod);
           //prod=JSON.parse(prod); LO COMENTO XQ YA ESTA PARSEADO
@@ -1437,12 +1443,12 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
               console.log("OK! Con el ID: " + docRef.id);
               storage.clear();
               mainView.router.navigate('/final/');
-                toastFinal = app.toast.create({
-                    text: '¡Gracias!',
-                    position: 'center',
-                    closeTimeout: 2000,
-                });
-                toastFinal.open();
+              toastFinal = app.toast.create({
+                  text: '¡Gracias!',
+                  position: 'center',
+                  closeTimeout: 2000,
+              });
+              toastFinal.open();
           })
           .catch(function(error) { // .catch((error) => {
               console.log("Error: " + error);
@@ -1451,7 +1457,7 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
   }
 
   function fnHistorialdeCompras() {
-              mainView.router.navigate('/miscompras/');
+      mainView.router.navigate('/miscompras/');
   }
   /*---------------------------------
   FUNCIONES TENDENCIAXS
@@ -1508,105 +1514,105 @@ $$(document).on('page:init', '.page[data-name="final"]', function(e) {
 
   }
 
- function onSuccessCamara(imageData) {
+  function onSuccessCamara(imageData) {
       $$("#foto").attr("src", imageData);
-  
-  getFileObject(imageData, function(fileObject) { //fn1
-     var storageRef = firebase.storage().ref();
-    var uploadTask = storageRef.child('tapas/'+$$("#nuevocodigo").val()+'.jpg').put(fileObject); //recibe un archivo blob y lo sube al cloud storage
-    uploadTask.on('state_changed', function(snapshot) {                   //promesa que administra o supervisa el estado de la carga cuando cambie el estado de su snapshot, mostrando el estado del snapsht,
-        console.log(snapshot);                                            //
-    }, function(error) { //funcion de error
-        console.log(error);
-        app.dialog.alert(error)
-    }, function() {     //funcion que si todo sale bien:
-        uploadTask.snapshot.ref.getDownloadURL().then( //obtengo el url de descarga
-          function(downloadURL) {
-          console.log('el archivo esta disponible en', downloadURL);//Muestro el link
-          tapanueva=downloadURL;
-            app.dialog.alert('Imagen subida')
-          //aca abajo puedo elegir que hacer con mi imagen que ya esta cargada y la puedo manejar a partir de mi download link
- 
-        });
-    });
-  });
-  
- 
-}
-// lo de abajo se ejecuta en la funcion on succes (es necesario ejecutar solo getFileFbject) dentro del succes
-//toma un blob y un nombre y cambia fecha y nombre, luego devuelve el blob
-var blobToFile = function(blob, name) { 
-  blob.lastModifiedDate = new Date()    //modifica la ultima fecha del blob 
-  blob.name = name                      //modifica el nombre del blob
-  return blob
-}
-//A partir de la ubicacion de nuestro file y una funcion (cb) ejecuta getfileBlob (funcion especificada abajo)
-function getFileObject(filePathOrUrl, cb) {  
-  getFileBlob(filePathOrUrl, function(blob) { //fn2      //llama a la funcion getFileBlob con el url introducido y una funcion que: 
-      cb(blobToFile(blob, ''+$$("#nuevocodigo").val()+'.jpg'));             //ejecuta nuestro cb (callback) sobre el blob con nombre y fecha cambiada (el nombre sera 'test.jpg')
-  });
-};
-//obtiene un file desde el servidor utilizando un url,  lo transfrma a tipo blob y ejecuta una funcion (cb) para luego enviarlo al servidor
-function getFileBlob(url, cb) {   
-  var xhr= new XMLHttpRequest()   //creo una nueva instancia de XMLHttpRequest
-  xhr.open('GET', url)            //inicializo una peticion asincronica del url al server
-  xhr.responseType = "blob"       // declaro que el valor del tipo de respuesta es blob (para luego usarlo mas adelante)
-  xhr.addEventListener('load', ()=>{//Le agrego un event listener que cuando cargue  se va a ejecutar 
-    cb(xhr.response)              //mi cb (callback) con la respuesta del servidor
-  })
-  xhr.send()                      //Envia la peticion nuevamente. 
-}
-//Se ejecuta la funcion getfileObject con nuestra imagen y el cb que: 
-/*orden de funcionamiento:
-1. getFileObject(imageData, fn1)    || inserto un url
-2. getFileBlob (url, fn2)           || realizo desde ese url una peticion, me devuelve un blob
-3. fn2                              || ejecuto la funcion 1 con el resultado de:
-4. bloblToFile(blob, test.jpg)      || desde mi blob obtengo un file
-5. fn1                
 
-
-/* function onSuccessCamara(imageURI) {
-      $$("#foto").attr("src", imageURI);
-      // RESTA QUE ESTA FOTO SUBA AL STORAGE…. O HACER OTRA COSA...
-      console.log(imageURI)
-      var storageRef = firebase.storage().ref();
-      var getFileBlob = function(url, cb) {
-          var xhr = new XMLHttpRequest();
-          xhr.open("GET", url);
-          xhr.responseType = "blob";
-          xhr.addEventListener('load', function() {
-              cb(xhr.response);
-          });
-          xhr.send();
-      };
-
-      var blobToFile = function(blob, name) {
-          blob.lastModifiedDate = new Date();
-          blob.name = name;
-          return blob;
-      };
-
-      var getFileObject = function(filePathOrUrl, cb) {
-          getFileBlob(filePathOrUrl, function(blob) {
-              cb(blobToFile(blob, 'test.jpg'));
-          });
-      };
-
-      getFileObject(imageData, function(fileObject) {
-          var uploadTask = storageRef.child('images/test.jpg').put(fileObject);
-
-          uploadTask.on('state_changed', function(snapshot) {
-              console.log(snapshot);
-          }, function(error) {
+      getFileObject(imageData, function(fileObject) { //fn1
+          var storageRef = firebase.storage().ref();
+          var uploadTask = storageRef.child('tapas/' + $$("#nuevocodigo").val() + '.jpg').put(fileObject); //recibe un archivo blob y lo sube al cloud storage
+          uploadTask.on('state_changed', function(snapshot) { //promesa que administra o supervisa el estado de la carga cuando cambie el estado de su snapshot, mostrando el estado del snapsht,
+              console.log(snapshot); //
+          }, function(error) { //funcion de error
               console.log(error);
-          }, function() {
-              var downloadURL = uploadTask.snapshot.downloadURL;
-              console.log(downloadURL);
-              // handle image here
+              app.dialog.alert(error)
+          }, function() { //funcion que si todo sale bien:
+              uploadTask.snapshot.ref.getDownloadURL().then( //obtengo el url de descarga
+                  function(downloadURL) {
+                      console.log('el archivo esta disponible en', downloadURL); //Muestro el link
+                      tapanueva = downloadURL;
+                      app.dialog.alert('Imagen subida')
+                      //aca abajo puedo elegir que hacer con mi imagen que ya esta cargada y la puedo manejar a partir de mi download link
+
+                  });
           });
       });
 
-  }*/
+
+  }
+  // lo de abajo se ejecuta en la funcion on succes (es necesario ejecutar solo getFileFbject) dentro del succes
+  //toma un blob y un nombre y cambia fecha y nombre, luego devuelve el blob
+  var blobToFile = function(blob, name) {
+      blob.lastModifiedDate = new Date() //modifica la ultima fecha del blob 
+      blob.name = name //modifica el nombre del blob
+      return blob
+  }
+  //A partir de la ubicacion de nuestro file y una funcion (cb) ejecuta getfileBlob (funcion especificada abajo)
+  function getFileObject(filePathOrUrl, cb) {
+      getFileBlob(filePathOrUrl, function(blob) { //fn2      //llama a la funcion getFileBlob con el url introducido y una funcion que: 
+          cb(blobToFile(blob, '' + $$("#nuevocodigo").val() + '.jpg')); //ejecuta nuestro cb (callback) sobre el blob con nombre y fecha cambiada (el nombre sera 'test.jpg')
+      });
+  };
+  //obtiene un file desde el servidor utilizando un url,  lo transfrma a tipo blob y ejecuta una funcion (cb) para luego enviarlo al servidor
+  function getFileBlob(url, cb) {
+      var xhr = new XMLHttpRequest() //creo una nueva instancia de XMLHttpRequest
+      xhr.open('GET', url) //inicializo una peticion asincronica del url al server
+      xhr.responseType = "blob" // declaro que el valor del tipo de respuesta es blob (para luego usarlo mas adelante)
+      xhr.addEventListener('load', () => { //Le agrego un event listener que cuando cargue  se va a ejecutar 
+          cb(xhr.response) //mi cb (callback) con la respuesta del servidor
+      })
+      xhr.send() //Envia la peticion nuevamente. 
+  }
+  //Se ejecuta la funcion getfileObject con nuestra imagen y el cb que: 
+  /*orden de funcionamiento:
+  1. getFileObject(imageData, fn1)    || inserto un url
+  2. getFileBlob (url, fn2)           || realizo desde ese url una peticion, me devuelve un blob
+  3. fn2                              || ejecuto la funcion 1 con el resultado de:
+  4. bloblToFile(blob, test.jpg)      || desde mi blob obtengo un file
+  5. fn1                
+
+
+  /* function onSuccessCamara(imageURI) {
+        $$("#foto").attr("src", imageURI);
+        // RESTA QUE ESTA FOTO SUBA AL STORAGE…. O HACER OTRA COSA...
+        console.log(imageURI)
+        var storageRef = firebase.storage().ref();
+        var getFileBlob = function(url, cb) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url);
+            xhr.responseType = "blob";
+            xhr.addEventListener('load', function() {
+                cb(xhr.response);
+            });
+            xhr.send();
+        };
+
+        var blobToFile = function(blob, name) {
+            blob.lastModifiedDate = new Date();
+            blob.name = name;
+            return blob;
+        };
+
+        var getFileObject = function(filePathOrUrl, cb) {
+            getFileBlob(filePathOrUrl, function(blob) {
+                cb(blobToFile(blob, 'test.jpg'));
+            });
+        };
+
+        getFileObject(imageData, function(fileObject) {
+            var uploadTask = storageRef.child('images/test.jpg').put(fileObject);
+
+            uploadTask.on('state_changed', function(snapshot) {
+                console.log(snapshot);
+            }, function(error) {
+                console.log(error);
+            }, function() {
+                var downloadURL = uploadTask.snapshot.downloadURL;
+                console.log(downloadURL);
+                // handle image here
+            });
+        });
+
+    }*/
 
 
 
@@ -1662,7 +1668,7 @@ function getFileBlob(url, cb) {
               $$("#pebook").val("");
               $$("#paudio").val("");
               $$("#ppapel").val("");
-              $$("#foto").attr('src','img/admin.png');
+              $$("#foto").attr('src', 'img/admin.png');
               console.log("Entró al OK")
           }, function() {
               mainView.router.navigate('/pgadmin/');
@@ -1673,9 +1679,9 @@ function getFileBlob(url, cb) {
               paginas = "";
               urldecompra = "";
               sinopsis = "";
-              precioebook="";
-              precioaudio="";
-              preciopapel="";
+              precioebook = "";
+              precioaudio = "";
+              preciopapel = "";
               console.log("Entró al CANCEL")
           })
       }
@@ -1828,34 +1834,33 @@ function getFileBlob(url, cb) {
 
 
   function fnrecuperarclave() {
-      app.dialog.login('Escribe tu usuario y tu nueva contraseña', "BuscateUnLibro", function(username, password) {
-          //console.log();        
-
-          var newPassword = password;
-
-          var docRef = userRef.doc(username);
-
-          console.log(docRef);
-          docRef.get().then((doc) => {
-              if (doc.exists) {
-                  firebase.auth().doc.updatePassword(newPassword).then(function() {
-                      app.dialog.alert(docRef.nombre, "Contraseña actualizada");
-                  }).catch(function(error) {
-                      // An error happened.
-                  });
-
-              } else {
-                  // doc.data() will be undefined in this case
-                  console.log("No such document!");
-              }
-          }).catch((error) => {
-              console.log("Error getting document:", error);
-          });
-
-
+      app.dialog.prompt('Escribe tu correo electrónico', "BuscateUnLibro", function(email) {
+          firebase.auth().sendPasswordResetEmail(email)
+              .then(() => {
+                  app.dialog.alert('Te enviamos un correo para recuperar tu contraseña');
+              })
+              .catch((error) => {
+                  var errorCode = error.code;
+                  var errorMessage = error.message;
+                  console.log(errorMessage);
+                  switch (errorMessage) {
+                      case "The email address is badly formatted.":
+                          toastError1 = app.toast.create({
+                              text: "Lo ingresado no es un e-mail",
+                              closeButton: true,
+                          });
+                          toastError1.open();
+                          break
+                      case "There is no user record corresponding to this identifier. The user may have been deleted.":
+                          toastError2 = app.toast.create({
+                              text: "El e-mail ingresado no se encuentra registrado o verificado.",
+                              closeButton: true,
+                          });
+                          toastError2.open();
+                          break
+                          default:
+                  }
+              });
 
       });
-
-
-
   }
